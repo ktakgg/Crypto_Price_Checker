@@ -69,7 +69,7 @@ h1 {
     align-items: center;
     justify-content: center;
     margin-bottom: 25px;
-    font-size: 0.85rem; /* 全体的に小さく */
+    font-size: 1.0rem; /* 全体的に小さく */
     color: var(--text-dark);
     gap: 8px; /* 少し小さく */
 }
@@ -89,7 +89,7 @@ th, td {
     text-align: left;
     border-bottom: 1px solid var(--border-color);
     color: var(--text-light);
-    font-size: 0.95rem; /* 全体的に小さく */
+    font-size: 1.0rem; /* 全体的に小さく */
     vertical-align: middle; /* セルの内容を中央揃え */
 }
 
@@ -98,7 +98,7 @@ th {
     font-weight: 600; /* Satoshi-Variableの太いウェイトを使用 */
     color: var(--secondary-color);
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 1.0rem;
     letter-spacing: 0.4px;
     /* font-family: 'Montserrat', sans-serif; */ /* bodyから継承 */
 }
@@ -118,7 +118,7 @@ input {
     padding: 8px 12px; /* 小さく */
     border: 1px solid var(--input-border);
     border-radius: 6px; /* 小さく */
-    font-size: 0.9rem; /* 小さく */
+    font-size: 1.0rem; /* 小さく */
     background-color: var(--input-bg);
     color: var(--text-light);
     transition: all 0.3s ease;
@@ -141,7 +141,7 @@ input:focus {
 .note {
     text-align: center;
     margin-top: 12px; /* 小さく */
-    font-size: 0.8rem; /* 小さく */
+    font-size: 1.0rem; /* 小さく */
     color: var(--text-dark);
     padding: 8px; /* 小さく */
     background-color: rgba(0, 0, 0, 0.1);
@@ -187,7 +187,7 @@ input:focus {
     }
     th, td {
         padding: 10px 12px; /* 小さく */
-        font-size: 0.9rem; /* 小さく */
+        font-size: 1.0rem; /* 小さく */
     }
 }
 
@@ -203,17 +203,17 @@ input:focus {
         margin-bottom: 15px; /* 小さく */
     }
     table {
-        font-size: 0.85rem; /* 小さく */
+        font-size: 1.0rem; /* 小さく */
     }
     th, td {
         padding: 8px 10px; /* 小さく */
     }
     .update-info, .note {
-        font-size: 0.8rem; /* 小さく */
+        font-size: 1.0rem; /* 小さく */
     }
     input {
         padding: 6px 10px; /* 小さく */
-        font-size: 0.85rem; /* 小さく */
+        font-size: 1.0rem; /* 小さく */
     }
 }
 
@@ -241,7 +241,7 @@ input:focus {
     }
     th, td {
         padding: 6px 8px;
-        font-size: 0.75rem;
+        font-size: 1.0rem;
         white-space: normal;
         /* 各列の幅を調整 */
         width: 25%; /* デフォルトの幅 */
@@ -256,7 +256,7 @@ input:focus {
         width: 33%;
     }
     th {
-        font-size: 0.7rem;
+        font-size: 1.0rem;
     }
     tr {
         display: table-row;
@@ -283,10 +283,10 @@ input:focus {
     .currency-name {
         font-weight: 600;
         color: var(--text-light);
-        font-size: 0.8rem; /* 通貨名を少し大きく */
+        font-size: 1.0rem; /* 通貨名を少し大きく */
     }
     .currency-symbol {
-        font-size: 0.65rem; /* シンボルを小さく */
+        font-size: 1.0rem; /* シンボルを小さく */
         color: var(--text-dark);
     }
 
@@ -295,7 +295,7 @@ input:focus {
         flex-grow: 1;
         max-width: 90%; /* 入力フィールドの最大幅を広げる */
         padding: 4px 6px;
-        font-size: 0.8rem;
+        font-size: 1.0rem;
     }
 
     .price-info {
@@ -305,15 +305,15 @@ input:focus {
     }
 
     .price-usd {
-        font-size: 0.7rem;
+        font-size: 1.0rem;
         color: var(--text-light);
     }
 
     .price-jpy {
-        font-size: 0.7rem;
+        font-size: 1.0rem;
         color: var(--text-dark);
     }
     .update-info, .note {
-        font-size: 0.75rem;
+        font-size: 1.0rem;
     }
 }
