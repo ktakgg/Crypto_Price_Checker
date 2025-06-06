@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap');
+@font-face {
+    font-family: 'Satoshi-Variable';
+    src: url('Satoshi-Variable.ttf') format('truetype');
+    font-weight: 300 900; /* 可変フォントのウェイト範囲 */
+    font-display: swap;
+}
 
 :root {
     --primary-color: rgb(142, 255, 54); /* STEPN Green (指定された色) */
@@ -23,7 +28,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Robotoをメインフォントに */
+    font-family: 'Satoshi-Variable', sans-serif; /* Satoshi-Variableをメインフォントに */
     line-height: 1.6;
     color: var(--text-light);
     background-color: var(--background-dark);
@@ -53,10 +58,10 @@ h1 {
     margin-bottom: 25px;
     color: var(--primary-color);
     font-size: 2.2rem;
-    font-weight: 700; /* Montserratの太いウェイトを使用 */
+    font-weight: 700; /* Satoshi-Variableの太いウェイトを使用 */
     text-shadow: 0 0 10px rgba(142, 255, 54, 0.4);
     letter-spacing: 0.8px;
-    font-family: 'Montserrat', sans-serif; /* H1にMontserratを適用 */
+    /* font-family: 'Montserrat', sans-serif; */ /* bodyから継承 */
 }
 
 .update-info {
@@ -90,12 +95,12 @@ th, td {
 
 th {
     background-color: var(--table-header-bg);
-    font-weight: 600; /* Montserratの太いウェイトを使用 */
+    font-weight: 600; /* Satoshi-Variableの太いウェイトを使用 */
     color: var(--secondary-color);
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 0.4px;
-    font-family: 'Montserrat', sans-serif; /* THにMontserratを適用 */
+    /* font-family: 'Montserrat', sans-serif; */ /* bodyから継承 */
 }
 
 /* Remove bottom border for the last row */
@@ -229,7 +234,7 @@ input:focus {
         overflow-x: auto;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
-        min-width: 480px; /* 最小幅をさらに広げる */
+        min-width: 550px; /* 最小幅をさらに広げる */
     }
     thead {
         display: table-header-group;
@@ -238,6 +243,20 @@ input:focus {
         padding: 6px 8px;
         font-size: 0.75rem;
         white-space: normal;
+        /* 各列の幅を調整 */
+        width: 25%; /* デフォルトの幅 */
+    }
+    th:nth-child(1), td:nth-child(1) { /* 通貨/シンボル */
+        width: 25%;
+    }
+    th:nth-child(2), td:nth-child(2) { /* 現在価格(USD) */
+        width: 25%;
+    }
+    th:nth-child(3), td:nth-child(3) { /* 現在価格(JPY) */
+        width: 25%;
+    }
+    th:nth-child(4), td:nth-child(4) { /* 数量 */
+        width: 25%;
     }
     th {
         font-size: 0.7rem;
@@ -277,7 +296,7 @@ input:focus {
     input {
         text-align: right;
         flex-grow: 1;
-        max-width: 80px; /* 入力フィールドの最大幅を制限 */
+        max-width: 70px; /* 入力フィールドの最大幅をさらに制限 */
         padding: 4px 6px;
         font-size: 0.8rem;
     }
