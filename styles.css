@@ -84,6 +84,7 @@ th, td {
     border-bottom: 1px solid var(--border-color);
     color: var(--text-light);
     font-size: 0.95rem; /* 全体的に小さく */
+    vertical-align: middle; /* セルの内容を中央揃え */
 }
 
 th {
@@ -211,59 +212,74 @@ input:focus {
 
 @media (max-width: 576px) {
     body {
-        align-items: flex-start; /* Align to top on small screens */
+        align-items: flex-start;
     }
     .container {
-        padding: 8px; /* さらに小さく */
-        border-radius: 6px; /* さらに小さく */
+        padding: 8px;
+        border-radius: 6px;
     }
     h1 {
-        font-size: 1.2rem; /* さらに小さく */
-        margin-bottom: 8px; /* さらに小さく */
+        font-size: 1.2rem;
+        margin-bottom: 8px;
     }
     table {
         display: block;
-        overflow-x: auto; /* 横スクロールを有効に */
+        overflow-x: auto;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
-        min-width: 450px; /* 最小幅を設定して横スクロールを強制 */
+        min-width: 400px; /* 最小幅を調整 */
     }
     thead {
-        display: table-header-group; /* ヘッダーを再表示 */
+        display: table-header-group;
     }
     th, td {
-        padding: 6px 8px; /* さらに小さく */
-        font-size: 0.75rem; /* さらに小さく */
-        white-space: normal; /* セル内のテキストは折り返す */
+        padding: 6px 8px;
+        font-size: 0.75rem;
+        white-space: normal;
     }
     th {
-        font-size: 0.7rem; /* さらに小さく */
+        font-size: 0.7rem;
     }
     tr {
-        display: table-row; /* 行の表示を元に戻す */
+        display: table-row;
         margin-bottom: 0;
         border: none;
         border-radius: 0;
         background-color: transparent;
     }
     td {
-        display: table-cell; /* セルの表示を元に戻す */
+        display: table-cell;
         justify-content: flex-start;
         align-items: center;
         border-bottom: 1px solid var(--border-color);
     }
     td::before {
-        content: none; /* data-labelを非表示にする */
+        content: none;
     }
     
+    .currency-info {
+        display: flex;
+        flex-direction: column; /* 上下2段に配置 */
+        align-items: flex-start;
+    }
+    .currency-name {
+        font-weight: 600;
+        color: var(--text-light);
+        font-size: 0.8rem; /* 通貨名を少し大きく */
+    }
+    .currency-symbol {
+        font-size: 0.65rem; /* シンボルを小さく */
+        color: var(--text-dark);
+    }
+
     input {
         text-align: right;
         flex-grow: 1;
-        max-width: 100%; /* 幅を100%に */
-        padding: 4px 6px; /* さらに小さく */
-        font-size: 0.8rem; /* さらに小さく */
+        max-width: 100%;
+        padding: 4px 6px;
+        font-size: 0.8rem;
     }
     .update-info, .note {
-        font-size: 0.75rem; /* さらに小さく */
+        font-size: 0.75rem;
     }
 }
