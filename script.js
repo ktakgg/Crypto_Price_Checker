@@ -48,8 +48,12 @@ function initializeTable() {
                     <span class="currency-symbol">${currency.symbol}</span>
                 </div>
             </td>
-            <td data-label="現在価格(USD)" id="price-usd-${currency.id}">-</td>
-            <td data-label="現在価格(JPY)" id="price-jpy-${currency.id}">-</td>
+            <td data-label="現在価格">
+                <div class="price-info">
+                    <span class="price-usd" id="price-usd-${currency.id}">-</span>
+                    <span class="price-jpy" id="price-jpy-${currency.id}">-</span>
+                </div>
+            </td>
             <td data-label="数量">
                 <input type="number" 
                        id="amount-${currency.id}" 
