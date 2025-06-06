@@ -214,56 +214,56 @@ input:focus {
         align-items: flex-start; /* Align to top on small screens */
     }
     .container {
-        padding: 10px; /* 小さく */
-        border-radius: 8px; /* 小さく */
+        padding: 8px; /* さらに小さく */
+        border-radius: 6px; /* さらに小さく */
     }
     h1 {
-        font-size: 1.3rem; /* 小さく */
-        margin-bottom: 10px; /* 小さく */
+        font-size: 1.2rem; /* さらに小さく */
+        margin-bottom: 8px; /* さらに小さく */
     }
     table {
         display: block;
-        overflow-x: auto;
+        overflow-x: auto; /* 横スクロールを有効に */
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
+        min-width: 450px; /* 最小幅を設定して横スクロールを強制 */
     }
     thead {
-        display: none; /* Hide table header on small screens */
+        display: table-header-group; /* ヘッダーを再表示 */
+    }
+    th, td {
+        padding: 6px 8px; /* さらに小さく */
+        font-size: 0.75rem; /* さらに小さく */
+        white-space: normal; /* セル内のテキストは折り返す */
+    }
+    th {
+        font-size: 0.7rem; /* さらに小さく */
     }
     tr {
-        display: block;
-        margin-bottom: 8px; /* 小さく */
-        border: 1px solid var(--border-color);
-        border-radius: 6px; /* 小さく */
-        background-color: rgba(0, 0, 0, 0.1);
+        display: table-row; /* 行の表示を元に戻す */
+        margin-bottom: 0;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
     }
     td {
-        display: flex;
-        justify-content: space-between;
+        display: table-cell; /* セルの表示を元に戻す */
+        justify-content: flex-start;
         align-items: center;
-        padding: 8px 12px; /* 小さく */
         border-bottom: 1px solid var(--border-color);
-        font-size: 0.8rem; /* 小さく */
-    }
-    td:last-child {
-        border-bottom: none;
     }
     td::before {
-        content: attr(data-label);
-        font-weight: 600;
-        color: var(--secondary-color);
-        margin-right: 8px; /* 小さく */
-        flex-shrink: 0;
+        content: none; /* data-labelを非表示にする */
     }
-    td:nth-of-type(1)::before { content: "通貨"; }
-    td:nth-of-type(2)::before { content: "シンボル"; }
-    td:nth-of-type(3)::before { content: "現在価格(USD)"; }
-    td:nth-of-type(4)::before { content: "現在価格(JPY)"; }
-    td:nth-of-type(5)::before { content: "数量"; }
     
     input {
         text-align: right;
         flex-grow: 1;
-        max-width: 60%;
+        max-width: 100%; /* 幅を100%に */
+        padding: 4px 6px; /* さらに小さく */
+        font-size: 0.8rem; /* さらに小さく */
+    }
+    .update-info, .note {
+        font-size: 0.75rem; /* さらに小さく */
     }
 }
