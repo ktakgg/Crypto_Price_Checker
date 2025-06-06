@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Price Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crypto Price Checker</h1>
+        <div class="update-info">
+            <span>最終更新: </span>
+            <span id="last-update-time">-</span>
+            <span id="loading-indicator" class="hidden">
+                <div class="spinner"></div>
+            </span>
+        </div>
+        
+        <table id="crypto-table">
+            <thead>
+                <tr>
+                    <th data-label="通貨">通貨</th>
+                    <th data-label="シンボル">シンボル</th>
+                    <th data-label="現在価格(USD)">現在価格(USD)</th>
+                    <th data-label="現在価格(JPY)">現在価格(JPY)</th>
+                    <th data-label="数量">数量 (入力/相対表示)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+        
+        <div class="note">※ いずれかの数量フィールドに値を入力すると、他の通貨の数量が自動計算されます。</div>
+        <div id="error-message" class="error hidden"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

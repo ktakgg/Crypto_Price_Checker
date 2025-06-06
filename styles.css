@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #6a0dad; /* Purple */
+    --secondary-color: #00bcd4; /* Cyan */
+    --background-dark: #1a1a2e;
+    --background-light: #2e2e4a;
+    --text-light: #e0e0e0;
+    --text-dark: #a0a0a0;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --table-header-bg: rgba(255, 255, 255, 0.05);
+    --table-row-hover: rgba(255, 255, 255, 0.03);
+    --input-bg: rgba(255, 255, 255, 0.08);
+    --input-border: rgba(255, 255, 255, 0.2);
+    --error-bg: #e74c3c;
+    --error-text: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-light);
+    background: linear-gradient(135deg, var(--background-dark) 0%, #0f0f1a 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--background-light);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px; /* 少し小さく */
+    color: var(--primary-color);
+    font-size: 2.2rem; /* 小さく */
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(106, 13, 173, 0.4); /* 影も少し小さく */
+    letter-spacing: 0.8px; /* 少し小さく */
+}
+
+.update-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 0.85rem; /* 全体的に小さく */
+    color: var(--text-dark);
+    gap: 8px; /* 少し小さく */
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; /* For rounded corners on cells */
+    border-spacing: 0;
+    margin-bottom: 20px; /* 少し小さく */
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* 少し小さく */
+    overflow: hidden; /* Ensures rounded corners are applied */
+}
+
+th, td {
+    padding: 12px 18px; /* 少し小さく */
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-light);
+    font-size: 0.95rem; /* 全体的に小さく */
+}
+
+th {
+    background-color: var(--table-header-bg);
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 0.8rem; /* 小さく */
+    letter-spacing: 0.4px; /* 少し小さく */
+}
+
+/* Remove bottom border for the last row */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: var(--table-row-hover);
+    transition: background-color 0.2s ease-in-out;
+}
+
+input {
+    width: 100%;
+    padding: 8px 12px; /* 小さく */
+    border: 1px solid var(--input-border);
+    border-radius: 6px; /* 小さく */
+    font-size: 0.9rem; /* 小さく */
+    background-color: var(--input-bg);
+    color: var(--text-light);
+    transition: all 0.3s ease;
+    -moz-appearance: textfield; /* Firefox */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.3);
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.note {
+    text-align: center;
+    margin-top: 12px; /* 小さく */
+    font-size: 0.8rem; /* 小さく */
+    color: var(--text-dark);
+    padding: 8px; /* 小さく */
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 6px; /* 小さく */
+}
+
+.error {
+    color: var(--error-text);
+    text-align: center;
+    margin-top: 12px; /* 小さく */
+    padding: 12px; /* 小さく */
+    background-color: var(--error-bg);
+    border-radius: 6px; /* 小さく */
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.25); /* 影も少し小さく */
+}
+
+.hidden {
+    display: none;
+}
+
+.spinner {
+    width: 20px; /* 小さく */
+    height: 20px; /* 小さく */
+    border: 3px solid rgba(255, 255, 255, 0.2); /* 小さく */
+    border-radius: 50%;
+    border-top-color: var(--secondary-color);
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 8px; /* 小さく */
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .container {
+        padding: 20px; /* 小さく */
+    }
+    h1 {
+        font-size: 1.8rem; /* 小さく */
+    }
+    th, td {
+        padding: 10px 12px; /* 小さく */
+        font-size: 0.9rem; /* 小さく */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* 小さく */
+    }
+    .container {
+        padding: 15px; /* 小さく */
+    }
+    h1 {
+        font-size: 1.5rem; /* 小さく */
+        margin-bottom: 15px; /* 小さく */
+    }
+    table {
+        font-size: 0.85rem; /* 小さく */
+    }
+    th, td {
+        padding: 8px 10px; /* 小さく */
+    }
+    .update-info, .note {
+        font-size: 0.8rem; /* 小さく */
+    }
+    input {
+        padding: 6px 10px; /* 小さく */
+        font-size: 0.85rem; /* 小さく */
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        align-items: flex-start; /* Align to top on small screens */
+    }
+    .container {
+        padding: 10px; /* 小さく */
+        border-radius: 8px; /* 小さく */
+    }
+    h1 {
+        font-size: 1.3rem; /* 小さく */
+        margin-bottom: 10px; /* 小さく */
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    thead {
+        display: none; /* Hide table header on small screens */
+    }
+    tr {
+        display: block;
+        margin-bottom: 8px; /* 小さく */
+        border: 1px solid var(--border-color);
+        border-radius: 6px; /* 小さく */
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 12px; /* 小さく */
+        border-bottom: 1px solid var(--border-color);
+        font-size: 0.8rem; /* 小さく */
+    }
+    td:last-child {
+        border-bottom: none;
+    }
+    td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin-right: 8px; /* 小さく */
+        flex-shrink: 0;
+    }
+    td:nth-of-type(1)::before { content: "通貨"; }
+    td:nth-of-type(2)::before { content: "シンボル"; }
+    td:nth-of-type(3)::before { content: "現在価格(USD)"; }
+    td:nth-of-type(4)::before { content: "現在価格(JPY)"; }
+    td:nth-of-type(5)::before { content: "数量"; }
+    
+    input {
+        text-align: right;
+        flex-grow: 1;
+        max-width: 60%;
+    }
+}
