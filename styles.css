@@ -173,6 +173,31 @@ input:focus {
     margin-left: 8px; /* 小さく */
 }
 
+.currency-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.currency-logo {
+    width: 20px; /* 20ピクセル固定 */
+    height: 20px; /* 20ピクセル固定 */
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle; /* ロゴを文字の垂直方向中央に配置 */
+}
+
+.currency-name {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 0.8rem;
+}
+
+.currency-symbol {
+    font-size: 0.9rem; /* シンボルを小さく */
+    color: var(--text-dark);
+}
+
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
@@ -277,13 +302,22 @@ input:focus {
     
     .currency-info {
         display: flex;
-        flex-direction: column; /* 上下2段に配置 */
-        align-items: flex-start;
+        align-items: center;
+        gap: 8px;
     }
+
+    .currency-logo {
+        width: 20px; /* 20ピクセル固定 */
+        height: 20px; /* 20ピクセル固定 */
+        border-radius: 50%;
+        object-fit: cover;
+        vertical-align: middle; /* ロゴを文字の垂直方向中央に配置 */
+    }
+
     .currency-name {
         font-weight: 600;
         color: var(--text-light);
-        font-size: 0.9rem; /* 通貨名を少し大きく */
+        font-size: 0.8rem;
     }
     .currency-symbol {
         font-size: 0.9rem; /* シンボルを小さく */

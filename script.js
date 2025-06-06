@@ -41,11 +41,29 @@ function initializeTable() {
         const row = document.createElement('tr');
         row.id = `row-${currency.id}`;
         
+        // 通貨ごとに適切な画像形式を選択
+        let logoSrc = '';
+        let onerrorSrc = '';
+        
+        if (currency.id === 'usd' || currency.id === 'jpy') {
+            logoSrc = `${currency.id}.png`;
+            onerrorSrc = `'${currency.id}.webp'`;
+        } else if (currency.id === 'ggt') {
+            logoSrc = `${currency.id}.jpg`;
+            onerrorSrc = `'${currency.id}.png'`;
+        } else {
+            logoSrc = `${currency.id}.webp`;
+            onerrorSrc = `'${currency.id}.png'`;
+        }
+        
         row.innerHTML = `
             <td data-label="通貨/シンボル">
                 <div class="currency-info">
-                    <span class="currency-name">${currency.name}</span>
-                    <span class="currency-symbol">${currency.symbol}</span>
+                    <img src="${logoSrc}" alt="${currency.name} logo" class="currency-logo" onerror="this.onerror=null;this.src=${onerrorSrc}" loading="lazy">
+                    <div>
+                        <span class="currency-name">${currency.name}</span>
+                        <span class="currency-symbol">${currency.symbol}</span>
+                    </div>
                 </div>
             </td>
             <td data-label="現在価格">
