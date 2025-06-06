@@ -227,7 +227,7 @@ input:focus {
         overflow-x: auto;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
-        min-width: 400px; /* 最小幅を調整 */
+        min-width: 480px; /* 最小幅をさらに広げる */
     }
     thead {
         display: table-header-group;
@@ -275,7 +275,7 @@ input:focus {
     input {
         text-align: right;
         flex-grow: 1;
-        max-width: 100%;
+        max-width: 80px; /* 入力フィールドの最大幅を制限 */
         padding: 4px 6px;
         font-size: 0.8rem;
     }
