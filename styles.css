@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-    --primary-color: #80ed99; /* STEPN Green */
+    --primary-color: rgb(142, 255, 54); /* STEPN Green (指定された色) */
     --secondary-color: #00bcd4; /* Cyan (維持) */
     --background-dark: #121212; /* 非常に濃いダークグレー */
     --background-light: #1e1e1e; /* 少し明るいダークグレー */
@@ -23,10 +23,10 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Robotoをメインフォントに */
     line-height: 1.6;
     color: var(--text-light);
-    background-color: var(--background-dark); /* 新しい背景色変数を使用 */
+    background-color: var(--background-dark);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -53,9 +53,10 @@ h1 {
     margin-bottom: 25px;
     color: var(--primary-color);
     font-size: 2.2rem;
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(128, 237, 153, 0.4); /* プライマリカラーに合わせて影の色を調整 */
+    font-weight: 700; /* Montserratの太いウェイトを使用 */
+    text-shadow: 0 0 10px rgba(142, 255, 54, 0.4);
     letter-spacing: 0.8px;
+    font-family: 'Montserrat', sans-serif; /* H1にMontserratを適用 */
 }
 
 .update-info {
@@ -89,11 +90,12 @@ th, td {
 
 th {
     background-color: var(--table-header-bg);
-    font-weight: 600;
+    font-weight: 600; /* Montserratの太いウェイトを使用 */
     color: var(--secondary-color);
     text-transform: uppercase;
-    font-size: 0.8rem; /* 小さく */
-    letter-spacing: 0.4px; /* 少し小さく */
+    font-size: 0.8rem;
+    letter-spacing: 0.4px;
+    font-family: 'Montserrat', sans-serif; /* THにMontserratを適用 */
 }
 
 /* Remove bottom border for the last row */
