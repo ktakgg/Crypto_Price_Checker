@@ -69,7 +69,7 @@ h1 {
     align-items: center;
     justify-content: center;
     margin-bottom: 25px;
-    font-size: 0.8rem; /* 全体的に小さく */
+    font-size: 0.6rem; /* 全体的に小さく */
     color: var(--text-dark);
     gap: 8px; /* 少し小さく */
 }
@@ -348,6 +348,6 @@ input:focus {
         color: var(--text-dark);
     }
     .update-info, .note {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
