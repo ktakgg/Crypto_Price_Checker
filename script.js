@@ -5,8 +5,8 @@ const CURRENCIES = [
     { id: 'btc', name: 'Bitcoin', symbol: '$BTC', coingeckoId: 'bitcoin' },
     { id: 'sol', name: 'Solana', symbol: '$SOL', coingeckoId: 'solana' },
     { id: 'ggt', name: 'Go Game Token', symbol: '$GGT', coingeckoId: 'go-game-token' },
-    { id: 'gmt', name: 'STEPN Governance Token', symbol: '$GMT', coingeckoId: 'stepn' },
-    { id: 'gst', name: 'STEPN Green Satoshi Token', symbol: '$GST', coingeckoId: 'green-satoshi-token' }
+    { id: 'gmt', name: 'Green Metaverse Token', symbol: '$GMT', coingeckoId: 'stepn' },
+    { id: 'gst', name: 'Green Satoshi Token', symbol: '$GST', coingeckoId: 'green-satoshi-token' }
 ];
 
 // API configuration
