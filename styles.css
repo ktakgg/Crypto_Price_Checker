@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-    --primary-color: #6a0dad; /* Purple */
-    --secondary-color: #00bcd4; /* Cyan */
-    --background-dark: #1a1a2e;
-    --background-light: #2e2e4a;
-    --text-light: #e0e0e0;
-    --text-dark: #a0a0a0;
+    --primary-color: #80ed99; /* STEPN Green */
+    --secondary-color: #00bcd4; /* Cyan (維持) */
+    --background-dark: #121212; /* 非常に濃いダークグレー */
+    --background-light: #1e1e1e; /* 少し明るいダークグレー */
+    --text-light: #f0f0f0; /* 白に近いグレー */
+    --text-dark: #b0b0b0; /* 中間的なグレー */
     --border-color: rgba(255, 255, 255, 0.1);
     --table-header-bg: rgba(255, 255, 255, 0.05);
     --table-row-hover: rgba(255, 255, 255, 0.03);
@@ -26,7 +26,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: var(--text-light);
-    background: linear-gradient(135deg, var(--background-dark) 0%, #0f0f1a 100%);
+    background-color: var(--background-dark); /* 新しい背景色変数を使用 */
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -50,12 +50,12 @@ body {
 
 h1 {
     text-align: center;
-    margin-bottom: 25px; /* 少し小さく */
+    margin-bottom: 25px;
     color: var(--primary-color);
-    font-size: 2.2rem; /* 小さく */
+    font-size: 2.2rem;
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(106, 13, 173, 0.4); /* 影も少し小さく */
-    letter-spacing: 0.8px; /* 少し小さく */
+    text-shadow: 0 0 10px rgba(128, 237, 153, 0.4); /* プライマリカラーに合わせて影の色を調整 */
+    letter-spacing: 0.8px;
 }
 
 .update-info {
