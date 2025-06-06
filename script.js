@@ -42,8 +42,12 @@ function initializeTable() {
         row.id = `row-${currency.id}`;
         
         row.innerHTML = `
-            <td data-label="通貨">${currency.name}</td>
-            <td data-label="シンボル">${currency.symbol}</td>
+            <td data-label="通貨/シンボル">
+                <div class="currency-info">
+                    <span class="currency-name">${currency.name}</span>
+                    <span class="currency-symbol">${currency.symbol}</span>
+                </div>
+            </td>
             <td data-label="現在価格(USD)" id="price-usd-${currency.id}">-</td>
             <td data-label="現在価格(JPY)" id="price-jpy-${currency.id}">-</td>
             <td data-label="数量">
